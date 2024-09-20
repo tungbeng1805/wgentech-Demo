@@ -1,0 +1,64 @@
+<div class="section-intro">
+    <slider-component class="slider-mobile-gutter page-width page-width-desktop scroll-trigger animate--slide-in">
+        <div class="">
+            <div class="intro">
+              <div>
+                    {{
+                      section.settings.image
+                      | image_url: width: 3840
+                      | image_tag: width: '100%', height: 'auto', class: '', sizes: ''
+                    }}
+                  </div>
+                <div class="content-intro">
+                    <span class="line"></span>
+                    <h3 class="title-intro">{{ section.settings.title }}</h3>
+                    <p class="desciption">
+                        {{ section.settings.description }}
+                    </p>
+                    <a href="#" class="button-learn">
+                        Learn More 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="9" height="17" viewBox="0 0 9 17" fill="none">
+                            <g clip-path="url(#clip0_38_7791)">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.180771 0.680771C0.237928 0.623469 0.305828 0.578007 0.380583 0.546987C0.455337 0.515967 0.535477 0.5 0.616412 0.5C0.697347 0.5 0.777487 0.515967 0.852241 0.546987C0.926996 0.578007 0.994896 0.623469 1.05205 0.680771L8.4358 8.06452C8.4931 8.12168 8.53857 8.18958 8.56959 8.26433C8.60061 8.33909 8.61657 8.41923 8.61657 8.50016C8.61657 8.5811 8.60061 8.66124 8.56959 8.73599C8.53857 8.81074 8.4931 8.87865 8.4358 8.9358L1.05205 16.3196C0.936514 16.4351 0.779809 16.5 0.616412 16.5C0.453015 16.5 0.29631 16.4351 0.180771 16.3196C0.0652316 16.204 0.000322157 16.0473 0.000322157 15.8839C0.000322157 15.7205 0.0652316 15.5638 0.180771 15.4483L7.13011 8.50016L0.180771 1.55205C0.123469 1.4949 0.078006 1.427 0.0469863 1.35224C0.0159666 1.27749 0 1.19735 0 1.11641C0 1.03548 0.0159666 0.955338 0.0469863 0.880583C0.078006 0.805829 0.123469 0.737928 0.180771 0.680771V0.680771Z" fill="#96BB7C"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_38_7791">
+                                    <rect width="9" height="16" fill="white" transform="translate(0 0.5)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </slider-component>
+</div>
+{% schema %}
+  {
+    "name": "Intro",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image banner"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Approdable Packages"
+      },
+            {
+        "type": "text",
+        "id": "description",
+        "label": "Description",
+        "default": "Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Intro"
+      }
+    ]
+  }
+{% endschema %}
